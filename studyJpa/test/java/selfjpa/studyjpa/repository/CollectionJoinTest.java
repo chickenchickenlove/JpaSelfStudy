@@ -126,9 +126,6 @@ class CollectionJoinTest {
 
         log.info("Fetch JOin findMember Size = {}", findMember.size());
         assertThat(findMember.size()).isEqualTo(1);
-
-
-
     }
 
 
@@ -159,9 +156,51 @@ class CollectionJoinTest {
 
         log.info("Common Join findMember Size = {}", findMember.size());
         assertThat(findMember.size()).isEqualTo(1);
+    }
 
 
+
+    @Test
+    @DisplayName("Collection Fetch JOin + Paging 실패")
+    void test5() {
+
+        Member newMember1 = new Member();
+        Member newMember2 = new Member();
+        Order order1 = new Order();
+        Order order2 = new Order();
+        Order order3 = new Order();
+        Order order4 = new Order();
+
+
+
+        newMember1.setName("member1");
+        order1.setName("order1");
+        order2.setName("order2");
+        order1.addMember(newMember1);
+        order2.addMember(newMember1);
+
+        newMember2.setName("member2");
+        order3.setName("order3");
+        order4.setName("order4");
+        order3.addMember(newMember2);
+        order4.addMember(newMember2);
+
+
+        em.persist(newMember1);
+        em.persist(newMember2);
+        em.flush();
+        em.clear();
+
+        List<Member> findMember = queryFactory.selectFrom(member).distinct()
+                .join(member.orderList, order).fetchJoin()
+                .offset(0)
+                .limit(2)
+                .fetch();
 
     }
+
+
+
+
 
 }
