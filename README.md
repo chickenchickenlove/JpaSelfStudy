@@ -16,3 +16,4 @@
 # 22.02.23
 - (Lock Test) JPA 트랜잭션 격리 수준에 따른 Pessimistic LOCK 모드 테스트 코드 작성
 - JPA 트랜잭션 격리 수준에 따른 Pessimistic LOCK 모드 정리 (https://ojt90902.tistory.com/723)
+- JPA 2차 캐시 관련 정리(https://ojt90902.tistory.com/750)
