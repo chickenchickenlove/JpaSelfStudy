@@ -19,3 +19,5 @@
 - JPA 2차 캐시 관련 정리(https://ojt90902.tistory.com/750)
 - JPA Collection 필드 관련 정리 (https://ojt90902.tistory.com/751)
 - JPA Bulk 연산 시 주의할 점 정리(https://ojt90902.tistory.com/752)
+- JPQL과 영속성 컨텍스트 관련 정리 (https://ojt90902.tistory.com/753)
+
