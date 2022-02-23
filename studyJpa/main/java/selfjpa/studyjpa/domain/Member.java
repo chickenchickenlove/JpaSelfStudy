@@ -22,7 +22,13 @@ public class Member {
 
     private String name;
 
+    @Version
+    private Long version;
 
-    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Order> orderList = new ArrayList<>();
+
+
+
 }

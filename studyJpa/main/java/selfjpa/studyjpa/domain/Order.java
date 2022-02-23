@@ -23,6 +23,12 @@ public class Order {
     private String name;
 
 
+    @Version
+//    @Transient
+    private Long version;
+
+
+
     public void addMember(Member member) {
         this.member = member;
         member.getOrderList().add(this);
