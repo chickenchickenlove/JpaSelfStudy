@@ -10,5 +10,9 @@
 - (BatchTest) 대용량 배치 저장, 수정 해결 방법 정리(https://ojt90902.tistory.com/747)
 
 # 22.02.22
-- (Lock Test) JPA 트랜잭션 격리 수준에 따른 LOCK 모드 테스트 코드 작성
-- JPA 트랜잭션 격리 수준에 따른 LOCK 모드 정리 (https://ojt90902.tistory.com/723)
+- (Lock Test) JPA 트랜잭션 격리 수준에 따른 Optimistic LOCK 모드 테스트 코드 작성
+- JPA 트랜잭션 격리 수준에 따른 Optimistic LOCK 모드 정리 (https://ojt90902.tistory.com/723)
+
+# 22.02.23
+- (Lock Test) JPA 트랜잭션 격리 수준에 따른 Pessimistic LOCK 모드 테스트 코드 작성
+- JPA 트랜잭션 격리 수준에 따른 Pessimistic LOCK 모드 정리 (https://ojt90902.tistory.com/723)
